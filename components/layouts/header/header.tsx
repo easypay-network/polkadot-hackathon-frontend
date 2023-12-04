@@ -31,7 +31,7 @@ export const Header: FunctionComponent<Props> = ({index}) => {
                         </Link>
                     </Grid>
                     <Grid item xs={12} md={6}
-                          sx={{display: 'flex', justifyContent: 'flex-end', height: 'inherit', alignItems: 'center'}}>
+                          sx={{display: 'flex', justifyContent: 'center', height: 'inherit', alignItems: 'center'}}>
                         <Box className={styles.linkContainer}>
                             <Typography textAlign='center'
                                         className={classNames(styles.panelLink, index===0 && styles.selected, 'bold16')}>
@@ -49,18 +49,6 @@ export const Header: FunctionComponent<Props> = ({index}) => {
                                         className={classNames(styles.panelLink, index === 2 && styles.selected, 'bold16')}>
                                 <Link href="/swap">
                                     Swap
-                                </Link>
-                            </Typography>
-                            <Typography textAlign='center'
-                                        className={classNames(styles.panelLink, index === 3 && styles.selected, 'bold16')}>
-                                <Link href="/integrations">
-                                    Integrations
-                                </Link>
-                            </Typography>
-                            <Typography textAlign='center'
-                                        className={classNames(styles.panelLink, index === 4 && styles.selected, 'bold16')}>
-                                <Link href="/about">
-                                    About
                                 </Link>
                             </Typography>
                         </Box>
