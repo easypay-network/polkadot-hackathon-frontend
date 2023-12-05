@@ -11,7 +11,7 @@ import {CustomDivider} from "../../items";
 import getPhantomFromWindow from "./getPhantomFromWindow";
 import {ConnectButton} from "../../buttons/connect-button";
 import phantomIcon from "../../../public/phantomIcon.svg"
-import keplrIcon from "../../../public/keplrIcon.svg"
+import talisman from "../../../public/talismanIcon.svg"
 import googleIcon from "../../../public/googleIcon.svg"
 import {ChainInfoWithoutEndpoints} from "@keplr-wallet/types/src/chain-info";
 import {supportedNetworks} from "../../constants";
@@ -100,19 +100,11 @@ export const LoginModal: FunctionComponent<Props> = ({open, setOpen}) => {
         >
             <Box sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                 <Box textAlign="center">
-                    <Typography className={classNames('bold16', phantomWalletConnected && keplrWalletConnected && styles.connectedLabel)}
-                                paddingBottom='16px'
-                    >
-                        Connect Wallet
-                    </Typography>
-                    <ConnectButton connected={phantomWalletConnected} logoUrl={phantomIcon.src} onClick={onPhantomConnect} buttonName={'Phantom'} />
-                </Box>
-                <Box textAlign="center">
                     <Typography className={classNames('bold16', keplrWalletConnected && styles.connectedLabel)}
                                 paddingBottom='16px'
                     >
                     </Typography>
-                    <ConnectButton connected={keplrWalletConnected} logoUrl={keplrIcon.src} onClick={onKeplrConnect} buttonName={'Keplr'} />
+                    <ConnectButton connected={false} logoUrl={talisman.src} onClick={() => console.log('')} buttonName={'Talisman'} />
                 </Box>
                 <CustomDivider/>
                 <Box textAlign="center">
